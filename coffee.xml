@@ -1,0 +1,30 @@
+<menu>
+  <id>123456789</id>
+  <coffeeDrinks>
+    <drink>
+      <name>Espresso</name>
+      <ingredients>
+        <ingredient>ground coffee</ingredient>
+        <ingredient>hot water</ingredient>
+      </ingredients>
+      <preparation>Pressurized hot water is forced through finely ground coffee beans, resulting in a concentrated and strong coffee.</preparation>
+    </drink>
+    <drink>
+      <name>Cappuccino</name>
+      <ingredients>
+        <ingredient>espresso</ingredient>
+        <ingredient>steamed milk</ingredient>
+        <ingredient>foamed milk</ingredient>
+      </ingredients>
+      <preparation>Equal parts espresso, steamed milk, and foamed milk, layered in a cup.</preparation>
+    </drink>
+    <drink>
+      <name>Latte</name>
+      <ingredients>
+        <ingredient>espresso</ingredient>
+        <ingredient>steamed milk</ingredient>
+      </ingredients>
+      <preparation>Espresso and steamed milk, topped with a thin layer of frothed milk.</preparation>
+    </drink>
+  </coffeeDrinks>
+</menu>

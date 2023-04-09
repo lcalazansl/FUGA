@@ -1,0 +1,37 @@
+<Menu>
+  <Sandwiches>
+    <Sandwich>
+      <Name>BLT</Name>
+      <Ingredients>
+        <Ingredient>Bacon</Ingredient>
+        <Ingredient>Lettuce</Ingredient>
+        <Ingredient>Tomato</Ingredient>
+        <Ingredient>Mayonnaise</Ingredient>
+        <Ingredient>Bread</Ingredient>
+      </Ingredients>
+      <Preparation>
+        <Step>Toasted bread in a toaster.</Step>
+        <Step>Add mayonnaise to bread.</Step>
+        <Step>Add bacon, lettuce and tomato to bread.</Step>
+        <Step>Serve.</Step>
+      </Preparation>
+    </Sandwich>
+    <Sandwich>
+      <Name>Turkey Club</Name>
+      <Ingredients>
+        <Ingredient>Turkey</Ingredient>
+        <Ingredient>Bacon</Ingredient>
+        <Ingredient>Lettuce</Ingredient>
+        <Ingredient>Tomato</Ingredient>
+        <Ingredient>Mayonnaise</Ingredient>
+        <Ingredient>Bread</Ingredient>
+      </Ingredients>
+      <Preparation>
+        <Step>Toasted bread in a toaster.</Step>
+        <Step>Add mayonnaise to bread.</Step>
+        <Step>Add turkey, bacon, lettuce and tomato to bread.</Step>
+        <Step>Serve.</Step>
+      </Preparation>
+    </Sandwich>
+  </Sandwiches>
+</Menu>

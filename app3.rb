@@ -1,11 +1,14 @@
 require 'xmlsimple'
-  config = XmlSimple.xml_in('coffee_menu.xml',
+require 'JSON'
+  config = XmlSimple.xml_in('coffee.xml',
     'KeyAttr'    => { 'item' => 'name' },
     'ForceArray' => false,
     'ContentKey' => '-content'
   )
-p config
+p config.class
 p '-\\-'
+p config['coffeeDrinks']['drink']
 p '-\\-'
+p config['id'].to_json
 p '-\\-'
-p config['coffeeDrinks']
+p config['coffeeDrinks'].to_json
