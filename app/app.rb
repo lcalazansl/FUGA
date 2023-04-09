@@ -1,24 +1,44 @@
 require 'xmlsimple'
 require 'JSON'
 
+print "What's the file name?
+> "
+f_name = gets.chomp
+sleep(0.5)
+print "What is the extension of #{f_name} file?
+> "
+f_ext = gets.chomp
+sleep(0.5)
 
+if f_ext == 'xml'
+  p "Let's parse it!"
+  sleep (0.5)
+  menu = XmlSimple.xml_in("app/menus/#{f_name}.xml",
+    'KeyAttr'    => { 'item' => 'name' },
+    'ForceArray' => false,
+    'ContentKey' => '-content'
+    )
+else
+  return 'Sorry, this api only parses xml files'
+end
 
-config = XmlSimple.xml_in('app/menus/coffee.xml',
-  'KeyAttr'    => { 'item' => 'name' },
-  'ForceArray' => false,
-  'ContentKey' => '-content'
-  )
+p 'Here is a sample of the data'
+p "Menu id: #{menu['id']}"
+p JSON.pretty_generate(menu['coffeeDrinks']['drink'])
 
-p
-# p config.class
-p '-\\-'
-# p config['coffeeDrinks']['drink']
-p '-\\-'
-# p config['id'].to_json
-p '-\\-'
-# p JSON.pretty_generate(config)
-config['coffeeDrinks'].to_json
-p "Creating json file in app/menus directory"
-sleep(3)
-File.write("app/menus/#{config['id']}.json", JSON.pretty_generate(config))
-p "Json file of the menu id: #{config['id']} is ready."
+p '--||--'
+
+print "would you like to generate Json file?
+(y/n) > "
+gen_file = gets.chomp.downcase
+sleep(0.5)
+if gen_file == 'y'
+  p 'Creating json file in app/menus directory'
+  sleep(2)
+  File.write("app/menus/#{menu['id']}.json", JSON.pretty_generate(menu))
+  p "Json file of the menu id: #{menu['id']} is ready."
+elsif gen_file == 'n'
+  p 'Good bye!'
+else
+  p "Bad request, try again"
+end
