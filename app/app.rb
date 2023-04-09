@@ -1,6 +1,6 @@
 require 'xmlsimple'
 require 'JSON'
-  config = XmlSimple.xml_in('coffee.xml',
+  config = XmlSimple.xml_in('app/menus/coffee.xml',
     'KeyAttr'    => { 'item' => 'name' },
     'ForceArray' => false,
     'ContentKey' => '-content'

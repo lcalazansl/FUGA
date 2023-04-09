@@ -1,0 +1,32 @@
+GEM
+  specs:
+    json (2.6.3)
+    mustermann (3.0.0)
+      ruby2_keywords (~> 0.0.1)
+    rack (2.2.6.4)
+    rack-protection (3.0.5)
+      rack
+    rexml (3.2.5)
+    ruby2_keywords (0.0.5)
+    sinatra (3.0.5)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.5)
+      tilt (~> 2.0)
+    tilt (2.1.0)
+    xml-simple (1.1.9)
+      rexml
+
+PLATFORMS
+  arm64-darwin-21
+
+DEPENDENCIES
+  json (~> 2.6, >= 2.6.3)
+  sinatra (~> 3.0, >= 3.0.5)
+  xml-simple (~> 1.1, >= 1.1.9)
+
+RUBY VERSION
+   ruby 3.1.2p20
+
+BUNDLED WITH
+   2.4.10
