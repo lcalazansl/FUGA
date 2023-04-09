@@ -1,0 +1,49 @@
+<menu>
+  <coffeeDrinks>
+    <drink>
+      <name>Espresso</name>
+      <ingredients>
+        <ingredient>ground coffee</ingredient>
+        <ingredient>hot water</ingredient>
+      </ingredients>
+      <preparation>Pressurized hot water is forced through finely ground coffee beans, resulting in a concentrated and strong coffee.</preparation>
+    </drink>
+    <drink>
+      <name>Cappuccino</name>
+      <ingredients>
+        <ingredient>espresso</ingredient>
+        <ingredient>steamed milk</ingredient>
+        <ingredient>foamed milk</ingredient>
+      </ingredients>
+      <preparation>Equal parts espresso, steamed milk, and foamed milk, layered in a cup.</preparation>
+    </drink>
+    <drink>
+      <name>Latte</name>
+      <ingredients>
+        <ingredient>espresso</ingredient>
+        <ingredient>steamed milk</ingredient>
+      </ingredients>
+      <preparation>Espresso and steamed milk, topped with a thin layer of frothed milk.</preparation>
+    </drink>
+  </coffeeDrinks>
+  <coffeeBeans>
+    <bean>
+      <name>Arabica</name>
+      <description>A high-quality, mild coffee with a delicate flavor and aroma.</description>
+    </bean>
+    <bean>
+      <name>Robusta</name>
+      <description>A more bitter and strong coffee with a higher caffeine content than Arabica beans.</description>
+    </bean>
+  </coffeeBeans>
+  <brewingAccessories>
+    <accessory>
+      <name>French press</name>
+      <description>A simple and popular brewing method that produces a full-bodied coffee with a rich flavor.</description>
+    </accessory>
+    <accessory>
+      <name>Aeropress</name>
+      <description>A newer brewing method that uses air pressure to extract flavor from the coffee, resulting in a smooth and clean taste.</description>
+    </accessory>
+  </brewingAccessories>
+</menu>
