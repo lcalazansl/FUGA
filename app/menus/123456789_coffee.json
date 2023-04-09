@@ -1,0 +1,38 @@
+{
+  "id": "123456789",
+  "coffeeDrinks": {
+    "drink": [
+      {
+        "name": "Espresso",
+        "ingredients": {
+          "ingredient": [
+            "ground coffee",
+            "hot water"
+          ]
+        },
+        "preparation": "Pressurized hot water is forced through finely ground coffee beans, resulting in a concentrated and strong coffee."
+      },
+      {
+        "name": "Cappuccino",
+        "ingredients": {
+          "ingredient": [
+            "espresso",
+            "steamed milk",
+            "foamed milk"
+          ]
+        },
+        "preparation": "Equal parts espresso, steamed milk, and foamed milk, layered in a cup."
+      },
+      {
+        "name": "Latte",
+        "ingredients": {
+          "ingredient": [
+            "espresso",
+            "steamed milk"
+          ]
+        },
+        "preparation": "Espresso and steamed milk, topped with a thin layer of frothed milk."
+      }
+    ]
+  }
+}

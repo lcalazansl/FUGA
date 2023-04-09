@@ -35,7 +35,7 @@ sleep(0.5)
 if gen_file == 'y'
   p 'Creating json file in app/menus directory'
   sleep(2)
-  File.write("app/menus/#{menu['id']}.json", JSON.pretty_generate(menu))
+  File.write("app/menus/#{menu['id']}_#{f_name}.json", JSON.pretty_generate(menu))
   p "Json file of the menu id: #{menu['id']} is ready."
 elsif gen_file == 'n'
   p 'Good bye!'
