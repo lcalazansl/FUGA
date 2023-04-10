@@ -1,44 +1,39 @@
 require 'xmlsimple'
 require 'JSON'
 
-print "What's the file name?
-> "
-f_name = gets.chomp
-sleep(0.5)
-print "What is the extension of #{f_name} file?
-> "
-f_ext = gets.chomp
-sleep(0.5)
+def file_interpreter
+  puts "You initiate this file with the parameter #{ARGV[0]}"
 
-if f_ext == 'xml'
-  p "Let's parse it!"
-  sleep (0.5)
-  menu = XmlSimple.xml_in("app/menus/#{f_name}.xml",
+  @file_name = ARGV[0]
+
+  @file_extension = File.extname(@file_name)
+
+  if @file_extension == '.xml'
+    puts "The file extension for the file you passed is #{@file_extension}"
+    file_parser
+  else
+    puts "File extension should be '.xml'"
+  end
+end
+
+def file_parser
+  menu = XmlSimple.xml_in(ARGV[0],
     'KeyAttr'    => { 'item' => 'name' },
     'ForceArray' => false,
     'ContentKey' => '-content'
     )
-else
-  return 'Sorry, this api only parses xml files'
+    menu_keys = menu.keys
+    if menu_keys.include?('id')
+      file_generator(menu, menu_keys)
+    else
+      puts "Menu shoul have an id"
+    end
 end
 
-p 'Here is a sample of the data'
-p "Menu id: #{menu['id']}"
-p JSON.pretty_generate(menu)
-
-p '--||--'
-
-print "would you like to generate Json file?
-(y/n) > "
-gen_file = gets.chomp.downcase
-sleep(0.5)
-if gen_file == 'y'
-  p 'Creating json file in app/menus directory'
-  sleep(2)
-  File.write("app/menus/#{menu['id']}_#{f_name}.json", JSON.pretty_generate(menu))
-  p "Json file of the menu id: #{menu['id']} is ready."
-elsif gen_file == 'n'
-  p 'Good bye!'
-else
-  p "Bad request, try again"
+def file_generator(menu, menu_keys)
+  gen_file_name = "app/menus/#{menu_keys[1].downcase}_#{menu['id']}.json"
+  File.write(gen_file_name, JSON.pretty_generate(menu))
+  puts "The file '#{gen_file_name}' was generated"
 end
+
+file_interpreter

@@ -4,23 +4,22 @@ Parse your xml menu file to Json with this ruby api
 ## Requirements
 Ruby v ruby 3.1.2p20
 
-XML file structure
-XML file should be located at app/menus/**file_name.xml**
+XML file structure as follows
 
 ```
 <menu>
   <id>menu_id</id>
-  <coffeeDrinks>
-    <drink>
+  <menu_type>
+    <item>
       <name>drink_name</name>
       <ingredients>
         <ingredient>ingredient_name</ingredient>
         <ingredient>ingredient_name</ingredient>
       </ingredients>
-      <preparation>drink_preparation</preparation>
-    </drink>
-    <drink> ... </drink>
-  </coffeeDrinks>
+      <preparation>preparation_description</preparation>
+    </item>
+    <item> ... </item>
+  </menu_type>
 </menu>
 ```
 
@@ -28,6 +27,8 @@ XML file should be located at app/menus/**file_name.xml**
 
 `ruby bundle install`
 
-`ruby app/app.rb`
+`ruby app/app.rb <file_path>`
 
-follow prompt commands
+## Possible Errors
+
+lorem ipsum

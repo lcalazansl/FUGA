@@ -1,0 +1,48 @@
+{
+  "id": "234567891",
+  "Sandwiches": {
+    "Sandwich": [
+      {
+        "Name": "BLT",
+        "Ingredients": {
+          "Ingredient": [
+            "Bacon",
+            "Lettuce",
+            "Tomato",
+            "Mayonnaise",
+            "Bread"
+          ]
+        },
+        "Preparation": {
+          "Step": [
+            "Toasted bread in a toaster.",
+            "Add mayonnaise to bread.",
+            "Add bacon, lettuce and tomato to bread.",
+            "Serve."
+          ]
+        }
+      },
+      {
+        "Name": "Turkey Club",
+        "Ingredients": {
+          "Ingredient": [
+            "Turkey",
+            "Bacon",
+            "Lettuce",
+            "Tomato",
+            "Mayonnaise",
+            "Bread"
+          ]
+        },
+        "Preparation": {
+          "Step": [
+            "Toasted bread in a toaster.",
+            "Add mayonnaise to bread.",
+            "Add turkey, bacon, lettuce and tomato to bread.",
+            "Serve."
+          ]
+        }
+      }
+    ]
+  }
+}
