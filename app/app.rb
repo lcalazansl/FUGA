@@ -24,7 +24,7 @@ end
 
 p 'Here is a sample of the data'
 p "Menu id: #{menu['id']}"
-p JSON.pretty_generate(menu['coffeeDrinks']['drink'])
+p JSON.pretty_generate(menu)
 
 p '--||--'
 
