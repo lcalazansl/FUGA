@@ -29,23 +29,27 @@ class MenuInterpreter
 
   # parse file to array and checks for id
   def parser
+
+    extension
+
     # this method uses xmlsimple gem
     menu = XmlSimple.xml_in(
-      ARGV[0],
+      @file_path,
       'KeyAttr' => { 'item' => 'name' },
       'ForceArray' => false,
       'ContentKey' => '-content'
-      )
-    # this piece of code checks if the input file has an id
-    menu_keys = menu.keys
-    raise MissingMenuId, 'The file structure is missing an id' unless menu_keys.include?('id')
+    )
 
-    file_generator(menu, menu_keys)
+    # this piece of code checks if the input file has an id
+    raise MissingMenuId, 'The file structure is missing an id' unless menu.keys.include?('id')
+
+    file_generator(menu)
   end
 
-  def file_generator(menu, menu_keys)
-    json_file_name = "#{menu_keys[1].downcase}_#{menu['id']}.json"
-    json_file_path = "app/menus/#{menu_keys[1].downcase}_#{menu['id']}.json"
+  def file_generator(menu)
+    #generating json file name based on menu type + menu id
+    json_file_name = "#{menu.keys[1].downcase}#{menu['id']}.json"
+    json_file_path = "app/menus/#{json_file_name}"
 
     puts "#{File.exist?(json_file_path) ? 'Updating' : 'Generating'} file '#{json_file_name}"
     File.write(json_file_path, JSON.pretty_generate(menu))
@@ -54,5 +58,4 @@ class MenuInterpreter
 end
 
 menu_interpreter = MenuInterpreter.new(ARGV[0])
-menu_interpreter.extension
 menu_interpreter.parser
