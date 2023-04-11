@@ -1,0 +1,13 @@
+  <menu>
+    <id>menu_id</id>
+    <menu_type>
+      <item>
+        <name>drink_name</name>
+        <ingredients>
+          <ingredient>ingredient_name</ingredient>
+          <ingredient>ingredient_name</ingredient>
+        </ingredients>
+        <preparation>preparation_description</preparation>
+      </item>
+    </menu_type>
+  </menu>
