@@ -43,12 +43,16 @@ class MenuInterpreter
     # this piece of code checks if the input file has an id
     raise MissingMenuId, 'The file structure is missing an id' unless menu.keys.include?('id')
 
-    file_generator(menu)
+    FileGenerator.new.json_generator(menu)
   end
 
-  def file_generator(menu)
-    #generating json file name based on menu type + menu id
-    json_file_name = "#{menu.keys[1].downcase}#{menu['id']}.json"
+end
+
+# Class function is responsible to generate json file from parsed xml file
+class FileGenerator
+  def json_generator(menu)
+    # generating json file name based on menu type + menu id
+    json_file_name = "#{menu.keys[1]}#{menu['id']}.json"
     json_file_path = "app/menus/#{json_file_name}"
 
     puts "#{File.exist?(json_file_path) ? 'Updating' : 'Generating'} file '#{json_file_name}"
