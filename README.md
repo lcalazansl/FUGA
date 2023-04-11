@@ -71,6 +71,118 @@ The aplication will convert the xml file to json format and create a file `app/m
   }
 ```
 
-## Possible Errors
+## Possible Handled Errors
 
-lorem ipsum
+- Blank file path error
+- File could not be found
+- Extension is not Provided/Supported
+- Missing menu id
+
+## Examples
+
+### Working example
+When it's called with the propper parameter
+```
+$ ruby app/menu_interpreter.rb app/assets/sandwiches.xml
+You called this file with the parameter app/assets/sandwiches.xml
+Generating file 'sandwiches_234567891.json
+You can now find the file at: app/menus/sandwiches_234567891.json
+```
+In case you call the file using the same xml_in it will **update** the existing file avoiding duplicates.
+```
+$ ruby app/menu_interpreter.rb app/assets/sandwiches.xml
+You called this file with the parameter app/assets/sandwiches.xml
+Updating file 'sandwiches_234567891.json
+You can now find the file at: app/menus/sandwiches_234567891.json
+```
+The result of the IO files is as follows
+```
+<Menu>
+  <id>234567891</id>
+  <Sandwiches>
+    <Sandwich>
+      <Name>BLT</Name>
+      <Ingredients>
+        <Ingredient>Bacon</Ingredient>
+        <Ingredient>Lettuce</Ingredient>
+        <Ingredient>Tomato</Ingredient>
+        <Ingredient>Mayonnaise</Ingredient>
+        <Ingredient>Bread</Ingredient>
+      </Ingredients>
+      <Preparation>
+        <Step>Toasted bread in a toaster.</Step>
+        <Step>Add mayonnaise to bread.</Step>
+        <Step>Add bacon, lettuce and tomato to bread.</Step>
+        <Step>Serve.</Step>
+      </Preparation>
+    </Sandwich>
+    <Sandwich>
+      <Name>Turkey Club</Name>
+      <Ingredients>
+        <Ingredient>Turkey</Ingredient>
+        <Ingredient>Bacon</Ingredient>
+        <Ingredient>Lettuce</Ingredient>
+        <Ingredient>Tomato</Ingredient>
+        <Ingredient>Mayonnaise</Ingredient>
+        <Ingredient>Bread</Ingredient>
+      </Ingredients>
+      <Preparation>
+        <Step>Toasted bread in a toaster.</Step>
+        <Step>Add mayonnaise to bread.</Step>
+        <Step>Add turkey, bacon, lettuce and tomato to bread.</Step>
+        <Step>Serve.</Step>
+      </Preparation>
+    </Sandwich>
+  </Sandwiches>
+</Menu>
+
+
+{
+  "id": "234567891",
+  "Sandwiches": {
+    "Sandwich": [
+      {
+        "Name": "BLT",
+        "Ingredients": {
+          "Ingredient": [
+            "Bacon",
+            "Lettuce",
+            "Tomato",
+            "Mayonnaise",
+            "Bread"
+          ]
+        },
+        "Preparation": {
+          "Step": [
+            "Toasted bread in a toaster.",
+            "Add mayonnaise to bread.",
+            "Add bacon, lettuce and tomato to bread.",
+            "Serve."
+          ]
+        }
+      },
+      {
+        "Name": "Turkey Club",
+        "Ingredients": {
+          "Ingredient": [
+            "Turkey",
+            "Bacon",
+            "Lettuce",
+            "Tomato",
+            "Mayonnaise",
+            "Bread"
+          ]
+        },
+        "Preparation": {
+          "Step": [
+            "Toasted bread in a toaster.",
+            "Add mayonnaise to bread.",
+            "Add turkey, bacon, lettuce and tomato to bread.",
+            "Serve."
+          ]
+        }
+      }
+    ]
+  }
+}
+```
