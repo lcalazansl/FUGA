@@ -14,7 +14,7 @@ class MenuInterpreter
     raise BlankFilePathError, 'File path is required for this action' if file_path.nil?
     raise FileCouldNotBeFound, 'File path could not be found' unless File.exist?(file_path)
 
-    puts "You called this file with the parameter #{ARGV[0]}"
+    puts "Executing interpreter for file #{ARGV[0]}"
     @file_path = file_path
   end
 
@@ -49,7 +49,7 @@ class MenuInterpreter
 
     puts "#{File.exist?(json_file_path) ? 'Updating' : 'Generating'} file '#{json_file_name}"
     File.write(json_file_path, JSON.pretty_generate(menu))
-    puts "You can now find the file at: #{json_file_path}"
+    puts "Output file: #{json_file_path}"
   end
 end
 

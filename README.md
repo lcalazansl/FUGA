@@ -84,16 +84,16 @@ The aplication will convert the xml file to json format and create a file `app/m
 When it's called with the propper parameter
 ```
 $ ruby app/menu_interpreter.rb app/assets/sandwiches.xml
-You called this file with the parameter app/assets/sandwiches.xml
+Executing interpreter for file app/assets/sandwiches.xml
 Generating file 'sandwiches_234567891.json
-You can now find the file at: app/menus/sandwiches_234567891.json
+Output file: app/menus/sandwiches_234567891.json
 ```
 In case you call the file using the same xml_in it will **update** the existing file avoiding duplicates.
 ```
 $ ruby app/menu_interpreter.rb app/assets/sandwiches.xml
-You called this file with the parameter app/assets/sandwiches.xml
+Executing interpreter for file app/assets/sandwiches.xml
 Updating file 'sandwiches_234567891.json
-You can now find the file at: app/menus/sandwiches_234567891.json
+Output file: app/menus/sandwiches_234567891.json
 ```
 The result of the IO files is as follows
 ```
