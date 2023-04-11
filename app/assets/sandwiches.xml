@@ -1,38 +1,38 @@
-<Menu>
+<menu>
   <id>234567891</id>
-  <Sandwiches>
-    <Sandwich>
-      <Name>BLT</Name>
-      <Ingredients>
-        <Ingredient>Bacon</Ingredient>
-        <Ingredient>Lettuce</Ingredient>
-        <Ingredient>Tomato</Ingredient>
-        <Ingredient>Mayonnaise</Ingredient>
-        <Ingredient>Bread</Ingredient>
-      </Ingredients>
-      <Preparation>
-        <Step>Toasted bread in a toaster.</Step>
-        <Step>Add mayonnaise to bread.</Step>
-        <Step>Add bacon, lettuce and tomato to bread.</Step>
-        <Step>Serve.</Step>
-      </Preparation>
-    </Sandwich>
-    <Sandwich>
-      <Name>Turkey Club</Name>
-      <Ingredients>
-        <Ingredient>Turkey</Ingredient>
-        <Ingredient>Bacon</Ingredient>
-        <Ingredient>Lettuce</Ingredient>
-        <Ingredient>Tomato</Ingredient>
-        <Ingredient>Mayonnaise</Ingredient>
-        <Ingredient>Bread</Ingredient>
-      </Ingredients>
-      <Preparation>
-        <Step>Toasted bread in a toaster.</Step>
-        <Step>Add mayonnaise to bread.</Step>
-        <Step>Add turkey, bacon, lettuce and tomato to bread.</Step>
-        <Step>Serve.</Step>
-      </Preparation>
-    </Sandwich>
-  </Sandwiches>
-</Menu>
+  <sandwiches>
+    <sandwich>
+      <name>BLT</name>
+      <ingredients>
+        <ingredient>Bacon</ingredient>
+        <ingredient>Lettuce</ingredient>
+        <ingredient>Tomato</ingredient>
+        <ingredient>Mayonnaise</ingredient>
+        <ingredient>Bread</ingredient>
+      </ingredients>
+      <preparation>
+        <step>Toasted bread in a toaster.</step>
+        <step>Add mayonnaise to bread.</step>
+        <step>Add bacon, lettuce and tomato to bread.</step>
+        <step>Serve.</step>
+      </preparation>
+    </sandwich>
+    <sandwich>
+      <name>Turkey Club</name>
+      <ingredients>
+        <ingredient>Turkey</ingredient>
+        <ingredient>Bacon</ingredient>
+        <ingredient>Lettuce</ingredient>
+        <ingredient>Tomato</ingredient>
+        <ingredient>Mayonnaise</ingredient>
+        <ingredient>Bread</ingredient>
+      </ingredients>
+      <preparation>
+        <step>Toasted bread in a toaster.</step>
+        <step>Add mayonnaise to bread.</step>
+        <step>Add turkey, bacon, lettuce and tomato to bread.</step>
+        <step>Serve.</step>
+      </preparation>
+    </sandwich>
+  </sandwiches>
+</menu>

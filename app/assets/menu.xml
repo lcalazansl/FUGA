@@ -1,6 +1,6 @@
   <menu>
     <id>menu_id</id>
-    <menu_type>
+    <menuType>
       <item>
         <name>drink_name</name>
         <ingredients>
@@ -9,5 +9,5 @@
         </ingredients>
         <preparation>preparation_description</preparation>
       </item>
-    </menu_type>
+    </menuType>
   </menu>

@@ -8,14 +8,14 @@ The menu_interpreter class offers an easy API to parse your xml menu file into a
 ```
   $ bundle install
 ```
-## Quick Start
+## Quick start
 
 Say you have a xml file containing the following structure
 
 ```
   <menu>
     <id>menu_id</id>
-    <menu_type>
+    <menuType>
       <item>
         <name>drink_name</name>
         <ingredients>
@@ -32,7 +32,7 @@ Say you have a xml file containing the following structure
         </ingredients>
         <preparation>preparation_description</preparation>
       </item>
-    </menu_type>
+    </menuType>
   </menu>
 ```
 Then you can run the following
@@ -75,7 +75,7 @@ The aplication will convert the xml file to json format and create a file `app/m
 
 - Blank file path error
 - File could not be found
-- Extension is not Provided/Supported
+- Extension is not provided/Supported
 - Missing menu id
 
 ## Examples
@@ -97,54 +97,54 @@ You can now find the file at: app/menus/sandwiches_234567891.json
 ```
 The result of the IO files is as follows
 ```
-<Menu>
+<menu>
   <id>234567891</id>
-  <Sandwiches>
-    <Sandwich>
-      <Name>BLT</Name>
-      <Ingredients>
-        <Ingredient>Bacon</Ingredient>
-        <Ingredient>Lettuce</Ingredient>
-        <Ingredient>Tomato</Ingredient>
-        <Ingredient>Mayonnaise</Ingredient>
-        <Ingredient>Bread</Ingredient>
-      </Ingredients>
-      <Preparation>
-        <Step>Toasted bread in a toaster.</Step>
-        <Step>Add mayonnaise to bread.</Step>
-        <Step>Add bacon, lettuce and tomato to bread.</Step>
-        <Step>Serve.</Step>
-      </Preparation>
-    </Sandwich>
-    <Sandwich>
-      <Name>Turkey Club</Name>
-      <Ingredients>
-        <Ingredient>Turkey</Ingredient>
-        <Ingredient>Bacon</Ingredient>
-        <Ingredient>Lettuce</Ingredient>
-        <Ingredient>Tomato</Ingredient>
-        <Ingredient>Mayonnaise</Ingredient>
-        <Ingredient>Bread</Ingredient>
-      </Ingredients>
-      <Preparation>
-        <Step>Toasted bread in a toaster.</Step>
-        <Step>Add mayonnaise to bread.</Step>
-        <Step>Add turkey, bacon, lettuce and tomato to bread.</Step>
-        <Step>Serve.</Step>
-      </Preparation>
-    </Sandwich>
-  </Sandwiches>
-</Menu>
+  <sandwiches>
+    <sandwich>
+      <name>BLT</name>
+      <ingredients>
+        <ingredient>Bacon</ingredient>
+        <ingredient>Lettuce</ingredient>
+        <ingredient>Tomato</ingredient>
+        <ingredient>Mayonnaise</ingredient>
+        <ingredient>Bread</ingredient>
+      </ingredients>
+      <preparation>
+        <step>Toasted bread in a toaster.</step>
+        <step>Add mayonnaise to bread.</step>
+        <step>Add bacon, lettuce and tomato to bread.</step>
+        <step>Serve.</step>
+      </preparation>
+    </sandwich>
+    <sandwich>
+      <name>Turkey Club</name>
+      <ingredients>
+        <ingredient>Turkey</ingredient>
+        <ingredient>Bacon</ingredient>
+        <ingredient>Lettuce</ingredient>
+        <ingredient>Tomato</ingredient>
+        <ingredient>Mayonnaise</ingredient>
+        <ingredient>Bread</ingredient>
+      </ingredients>
+      <preparation>
+        <step>Toasted bread in a toaster.</step>
+        <step>Add mayonnaise to bread.</step>
+        <step>Add turkey, bacon, lettuce and tomato to bread.</step>
+        <step>Serve.</step>
+      </preparation>
+    </sandwich>
+  </sandwiches>
+</menu>
 
 
 {
   "id": "234567891",
-  "Sandwiches": {
-    "Sandwich": [
+  "sandwiches": {
+    "sandwich": [
       {
-        "Name": "BLT",
-        "Ingredients": {
-          "Ingredient": [
+        "name": "BLT",
+        "ingredients": {
+          "ingredient": [
             "Bacon",
             "Lettuce",
             "Tomato",
@@ -152,8 +152,8 @@ The result of the IO files is as follows
             "Bread"
           ]
         },
-        "Preparation": {
-          "Step": [
+        "preparation": {
+          "step": [
             "Toasted bread in a toaster.",
             "Add mayonnaise to bread.",
             "Add bacon, lettuce and tomato to bread.",
@@ -162,9 +162,9 @@ The result of the IO files is as follows
         }
       },
       {
-        "Name": "Turkey Club",
-        "Ingredients": {
-          "Ingredient": [
+        "name": "Turkey Club",
+        "ingredients": {
+          "ingredient": [
             "Turkey",
             "Bacon",
             "Lettuce",
@@ -173,8 +173,8 @@ The result of the IO files is as follows
             "Bread"
           ]
         },
-        "Preparation": {
-          "Step": [
+        "preparation": {
+          "step": [
             "Toasted bread in a toaster.",
             "Add mayonnaise to bread.",
             "Add turkey, bacon, lettuce and tomato to bread.",
