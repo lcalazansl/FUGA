@@ -5,3 +5,6 @@ gem 'xml-simple', '~> 1.1', '>= 1.1.9'
 
 # This is a JSON implementation as a Ruby extension in C.
 gem 'json', '~> 2.6', '>= 2.6.3'
+
+# testing gem
+gem 'rspec', '~> 3.12'
