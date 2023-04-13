@@ -90,7 +90,6 @@ This method parses the XML file specified in the constructor, validates the file
 ## Usage
 To use this class, simply create a new instance of MenuInterpreter with the path to an XML file as the argument, and call the parse method on the instance.
 
-csharp
 ```ruby
 MenuInterpreter.new('path/to/xml/file.xml').parse
 ```
@@ -128,7 +127,8 @@ This error is raised if the XML file structure is missing a menu ID.
 
 - Configurable output options
 
-  Allowing the user to choose the directory to save the generated file and how to handle duplicates, which is currently being override.
+  Allowing the user to choose the directory to save the generated file and how to handle duplicates, which is currently being overwritten.
+  This would also mean a separation of concern and a creation of a class for file generation (which is now a method part of the file interpreter class)
 
 - Deeper error handling
 
